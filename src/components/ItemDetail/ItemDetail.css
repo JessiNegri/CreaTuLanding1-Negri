@@ -1,0 +1,50 @@
+.item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #e4efe7;
+    min-height: 100vh;
+}
+
+/* Imagen grande y estilizada */
+.item-detail-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-detail-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Título */
+.item-detail-title {
+    font-size: 24px;
+    color: #99bc85;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Descripción */
+.item-detail-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Precio */
+.item-detail-price {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}

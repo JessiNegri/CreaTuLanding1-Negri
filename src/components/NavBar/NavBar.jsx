@@ -1,29 +1,31 @@
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import Logo from '../../assets/img/Logo.jpeg';
+import { Link } from 'react-router-dom';
 
-function NavBar() {
+const NavBar = () => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img src={Logo} alt="Logo de la marca" />
+                <Link to="/">
+                    <img src={Logo} alt="Logo de la marca" />
+                </Link>
             </div>
-        
+
             <ul className="nav-links">
-                <li><a href="#">Ceniceros</a></li>
-                <li><a href="#">Cuencos</a></li>
-                <li><a href="#">Deco</a></li>
-                <li><a href="#">Macetas</a></li>
-                <li><a href="#">Mates</a></li>
-                <li><a href="#">Portasahumerios</a></li>
-                <li><a href="#">Tazas</a></li>
-                <li><a href="#">Teteras</a></li>
+                <li><Link to="/category/ceniceros">Ceniceros</Link></li>
+                <li><Link to="/category/cuencos">Cuencos</Link></li>
+                <li><Link to="/category/deco">Deco</Link></li>
+                <li><Link to="/category/macetas">Macetas</Link></li>
+                <li><Link to="/category/mates">Mates</Link></li>
+                <li><Link to="/category/portasahumerios">Portasahumerios</Link></li>
+                <li><Link to="/category/tazas">Tazas</Link></li>
+                <li><Link to="/category/teteras">Teteras</Link></li>
             </ul>
-        
+
             <CartWidget />
-            
         </nav>
     );
-}
+};
 
 export default NavBar;
