@@ -1,0 +1,131 @@
+/* Contenedor general del carrito */
+.cart-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfaf6;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título del carrito */
+.cart-title {
+    text-align: center;
+    color: #99bc85;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Cada item del carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Imagen del producto */
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Información del producto */
+.cart-info h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.cart-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Botón eliminar producto */
+.cart-remove {
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-remove:hover {
+    background-color: #c0392b;
+}
+
+/* Total del carrito */
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Contenedor de los botones "Vaciar carrito" y "Finalizar compra" */
+.cart-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Botón Vaciar carrito */
+.cart-clear {
+    padding: 12px 20px;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-clear:hover {
+    background-color: #d35400;
+}
+
+/* Botón Finalizar compra */
+.cart-checkout {
+    padding: 12px 20px;
+    background-color: #99bc85;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cart-checkout:hover {
+    background-color: #7ca66b;
+}
+
+/* Estado carrito vacío */
+.cart-empty {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #555;
+}
+
+.cart-empty .cart-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #99bc85;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-empty .cart-btn:hover {
+    background-color: #7ca66b;
+}

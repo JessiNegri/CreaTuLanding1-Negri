@@ -1,6 +1,27 @@
 .cart-widget {
-    font-size: 18px;
     display: flex;
     align-items: center;
-    gap: 5px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-widget:hover {
+    opacity: 0.8;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+.cart-icon {
+    font-size: 26px;
 }

@@ -2,8 +2,12 @@ import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import Logo from '../../assets/img/Logo.jpeg';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CartContext } from '../../context/CartContext.jsx';
 
 const NavBar = () => {
+    const { totalQuantity } = useContext(CartContext);
+
     return (
         <nav className="navbar">
             <div className="logo">
@@ -23,7 +27,9 @@ const NavBar = () => {
                 <li><Link to="/category/teteras">Teteras</Link></li>
             </ul>
 
-            <CartWidget />
+            <Link to="/cart">
+                <CartWidget totalQuantity={totalQuantity} />
+            </Link>
         </nav>
     );
 };

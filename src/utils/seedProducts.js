@@ -1,3 +1,6 @@
+import db from "../db/db.js";
+import { collection, addDoc } from "firebase/firestore";
+
 const products = [
     // Ceniceros
     { 
@@ -303,12 +306,18 @@ const products = [
     },
 ];
 
-export const getProducts = () =>
-    new Promise((resolve) => {
-        setTimeout(() => resolve(products), 1000);
-    });
+const seedProducts = async () => {
+    try {
+        const productsRef = collection (db, "products");
 
-export const getProductById = (id) =>
-    new Promise((resolve) => {
-        setTimeout(() => resolve(products.find((p) => p.id === Number(id))), 1000);
-    });
+        products.map(async ( { id, ...dataProduct } ) => {
+            await addDoc (productsRef, dataProduct);
+        });
+
+        console.log ("Productos cargados exitosamente!");
+    } catch (error) {
+        console.log (error);
+    }
+}
+
+seedProducts ();
